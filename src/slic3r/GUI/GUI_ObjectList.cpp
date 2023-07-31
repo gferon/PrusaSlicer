@@ -5037,7 +5037,7 @@ void ObjectList::toggle_printable_state()
 
 ModelObject* ObjectList::object(const int obj_idx) const
 {
-    if (obj_idx < 0)
+    if (obj_idx < 0 || obj_idx >= m_objects->size())
         return nullptr;
 
     return (*m_objects)[obj_idx];
